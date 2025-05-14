@@ -20,6 +20,7 @@ public class TicketFileWriter {
             for (Map.Entry<String, Integer> entry : EventStorage.availableEvents.entrySet()) {
                 String line = entry.getKey() + "," + entry.getValue() + "\n";
                 writer.write(line);
+
             }
         } catch (IOException e) {
             System.err.println("Fehler beim Schreiben in Datei: " + e.getMessage());

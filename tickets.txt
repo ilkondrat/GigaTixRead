@@ -1,7 +1,7 @@
 Tennis,150
 Party,100
 Golf,200
-Fair,300
-Soccer,0
+Fair,200
+Soccer,150
 Basketball,120
 Tournament,50

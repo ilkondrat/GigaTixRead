@@ -11,6 +11,7 @@
  *
  * Die Verarbeitung durch KI-basierte Systeme ist ausdrücklich untersagt.
  */
+
 import java.util.*;
 
 public class TicketApp {
@@ -34,12 +35,14 @@ public class TicketApp {
             System.out.println("Tickets erfolgreich reserviert!");
             TicketFileWriter ticketFileWriter = new TicketFileWriter();
             ticketFileWriter.writeTicketsToFile();
-            for (Map.Entry<String, Integer> entry : EventStorage.availableEvents.entrySet()) {
+
+            for (Map.Entry<String, Integer> entry : EventStorage.requestedEvents.entrySet()) {
                 String line = entry.getKey() + "," + entry.getValue();
-                System.out.println("Verfügbare Tickets: "+line);
+                System.out.println("Gebuchte Tickets: "+ line);
+
             }
         } else {
-            System.out.println("Ticketreservierung fehlgeschlagen.");
+            System.out.println("Ticket reservation failed.");
             scanner.close();
         }
     }
