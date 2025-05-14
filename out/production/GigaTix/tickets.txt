@@ -1,0 +1,3 @@
+Messe,1
+Turnier,50
+Lanparty,100
