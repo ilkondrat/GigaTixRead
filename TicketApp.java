@@ -22,20 +22,24 @@ public class TicketApp {
         EventInitializer eventInitializer = new EventInitializer();
         eventInitializer.initializeEvents();
 
-        System.out.println("Enter event name: ");
+        System.out.println("Name des Ereignisses eingeben: ");
         String userEventName = scanner.nextLine();
 
-        System.out.println("Enter ticket quantity:");
+        System.out.println("Geben Sie die Anzahl der Tickets ein:");
         int requestedTickets = Integer.parseInt(scanner.nextLine());
 
         boolean success = EventInitializer.checkAndReserveTickets(userEventName, requestedTickets);
 
         if (success) {
-            System.out.println("Tickets reserved successfully!");
+            System.out.println("Tickets erfolgreich reserviert!");
             TicketFileWriter ticketFileWriter = new TicketFileWriter();
             ticketFileWriter.writeTicketsToFile();
+            for (Map.Entry<String, Integer> entry : EventStorage.availableEvents.entrySet()) {
+                String line = entry.getKey() + "," + entry.getValue();
+                System.out.println("Verfügbare Tickets: "+line);
+            }
         } else {
-            System.out.println("Ticket reservation failed.");
+            System.out.println("Ticketreservierung fehlgeschlagen.");
             scanner.close();
         }
     }

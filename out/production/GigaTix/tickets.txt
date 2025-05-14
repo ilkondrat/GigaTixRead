@@ -1,3 +1,7 @@
-Messe,1
-Turnier,50
-Lanparty,100
+Tennis,150
+Party,100
+Golf,200
+Fair,300
+Soccer,0
+Basketball,120
+Tournament,50

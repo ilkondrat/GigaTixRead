@@ -17,7 +17,7 @@ public class EventInitializer {
     public void initializeEvents() {
         EventStorage.availableEvents.put("Party", 100);
         EventStorage.availableEvents.put("Tournament", 50);
-        EventStorage.availableEvents.put("Fair", 200);
+        EventStorage.availableEvents.put("Fair", 300);
         EventStorage.availableEvents.put("Soccer", 200);
         EventStorage.availableEvents.put("Tennis", 150);
         EventStorage.availableEvents.put("Golf", 200);
